@@ -23,8 +23,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "_USER")
+@Table(
+        name = User.TABLE_NAME
+)
 public class User implements UserDetails {
+  public static final String TABLE_NAME = "_USER";
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

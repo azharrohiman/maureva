@@ -7,3 +7,5 @@ databaseChangeLog:
       file: db/flight/schema/flight-cabin-0.0.1.yml
   - include:
       file: db/user/schema/user-0.0.1.yml
+  - include:
+      file: db/booking/schema/booking-0.0.1.yml

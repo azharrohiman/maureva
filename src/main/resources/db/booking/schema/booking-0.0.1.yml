@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-create-booking-table
+      author: azhar.rohiman
+      changes:
+        - sql:
+            CREATE TABLE BOOKING
+            (
+              BOOKING_KEY BIGINT NOT NULL IDENTITY(1, 1),
+              FLIGHT_CABIN_KEY BIGINT NOT NULL,
+              USER_ID BIGINT NOT NULL,
+              PRIMARY KEY (BOOKING_KEY)
+            );
+  
+            ALTER TABLE BOOKING ADD CONSTRAINT BOOKING_FK_FLIGHT_CABIN FOREIGN KEY
+            (FLIGHT_CABIN_KEY) REFERENCES FLIGHT_CABIN (FLIGHT_CABIN_KEY)
+  
+            ALTER TABLE BOOKING ADD CONSTRAINT BOOKING_FK_USER FOREIGN KEY
+            (USER_ID) REFERENCES _USER (USER_ID)
