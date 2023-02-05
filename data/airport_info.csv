@@ -1,0 +1,11 @@
+country,region,city,airportCode
+Maurice,Grand Port,Plaine Magnien,MRU
+France,Paris,Charles de Gaulle,CDG
+France,Paris,Orly,ORY
+France,La Réunion,Saint Denis,RUN
+France,La Réunion,Saint Pierre,ZSE
+Madagascar,,Ivato,TNR,
+Angleterre,Londres,Heathrow,LHR
+Seychelles,,Victoria,SEZ
+Maurice,Rodrigues,Plaine Corail,RRG
+Singapore,,Changi,SIN
