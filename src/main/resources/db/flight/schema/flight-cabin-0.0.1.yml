@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-create-flight-cabin-table
+      author: azhar.rohiman
+      changes:
+        - sql:
+            CREATE TABLE FLIGHT_CABIN
+            (
+              FLIGHT_CABIN_KEY BIGINT NOT NULL IDENTITY(1, 1),
+              CABIN_CLASS NVARCHAR(25) NOT NULL,
+              SEATS_AVAILABLE SMALLINT NOT NULL,
+              FLIGHT_ID NVARCHAR(40) NOT NULL,
+              PRIMARY KEY (FLIGHT_CABIN_KEY)
+            );
+  
+            CREATE INDEX IX_FLIGHT_CABIN_FLIGHT_ID ON FLIGHT_CABIN (FLIGHT_ID);
+  
+            ALTER TABLE FLIGHT_CABIN ADD CONSTRAINT FLIGHT_CABIN_FK_FLIGHT FOREIGN KEY
+            (FLIGHT_ID) REFERENCES FLIGHT (FLIGHT_ID)

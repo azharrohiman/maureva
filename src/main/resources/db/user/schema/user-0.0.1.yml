@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-create-user-table
+      author: azhar.rohiman
+      changes:
+        - sql:
+            CREATE TABLE _USER
+            (
+              USER_ID BIGINT NOT NULL IDENTITY(1, 1),
+              FIRSTNAME NVARCHAR(255) NOT NULL,
+              LASTNAME NVARCHAR(255) NOT NULL,
+              EMAIL NVARCHAR(255) NOT NULL,
+              PASSWORD NVARCHAR(255) NOT NULL,
+              ROLE NVARCHAR(255) NOT NULL,
+              PRIMARY KEY (USER_ID)
+            );

@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-create-airport-table
+      author: azhar.rohiman
+      changes:
+        - sql:
+            CREATE TABLE AIRPORT
+            (
+              COUNTRY NVARCHAR(25) NOT NULL,
+              REGION NVARCHAR(30) NULL,
+              CITY NVARCHAR(40) NOT NULL,
+              AIRPORT_CODE NVARCHAR(10) NOT NULL,
+              PRIMARY KEY (AIRPORT_CODE)
+            );

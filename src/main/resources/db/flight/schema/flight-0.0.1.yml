@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-create-flight-table
+      author: azhar.rohiman
+      changes:
+        - sql:
+            CREATE TABLE FLIGHT
+            (
+              FLIGHT_ID NVARCHAR(40) NOT NULL,
+              CARRIER NVARCHAR(10) NOT NULL,
+              FLIGHT_NUMBER SMALLINT NOT NULL,
+              ORIGIN NVARCHAR(10) NOT NULL,
+              DESTINATION NVARCHAR(10) NOT NULL,
+              DEPARTURE_TIME DATETIME2 NOT NULL,
+              ARRIVAL_TIME DATETIME2 NOT NULL,
+              AIRPORT_CODE NVARCHAR(10) NOT NULL,
+              PRIMARY KEY (FLIGHT_ID)
+            );
+  
+            CREATE INDEX IX_FLIGHT_AIRPORT_CODE ON FLIGHT (AIRPORT_CODE);
+  
+            ALTER TABLE FLIGHT ADD CONSTRAINT FLIGHT_FK_AIRPORT FOREIGN KEY
+            (AIRPORT_CODE) REFERENCES AIRPORT (AIRPORT_CODE)

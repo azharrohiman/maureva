@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db/airport/schema/airport-0.0.1.yml
+  - include:
+      file: db/flight/schema/flight-0.0.1.yml
+  - include:
+      file: db/flight/schema/flight-cabin-0.0.1.yml
+  - include:
+      file: db/user/schema/user-0.0.1.yml
