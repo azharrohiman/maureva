@@ -6,7 +6,7 @@ Clone the code repo with the following command:
 git clone https://github.com/azharrohiman/maureva.git
 ```
 
-Before running the app, run the following docker command to start up MSSQL Server:
+Before running the app, run the following docker command from the project directory to start up MSSQL Server:
 
 ```
 docker-compose -f ./docker/db.docker-compose.yml --project-name maurevair up -d
